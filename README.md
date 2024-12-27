@@ -16,7 +16,7 @@ Object
 
 ### 1. Object
 
-Object has two characteristic:
+An object has two characteristic:
 1. State/Field (Variable and static value) 
 2. Behavior (Method - Function in Object)
 
