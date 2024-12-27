@@ -241,8 +241,7 @@ public class Person {
 2. `getName`, `setAge` and `setName` are ***protected***. If you use those method in `App` class, it will traffic an error. If you use in `ManagePerson`, it will work because it is in the same directory/folder(`data`).
 3. `Person` is ***public***, so it can work everywhere.
 
-For more example usage, please see in the code.
-
+For more example usage, please see in [inheritance](#4-inheritance) and [polymorphism](#5-polymorphism).
 
 ## 4. Inheritance
 
