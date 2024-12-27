@@ -24,30 +24,15 @@ An object has two characteristic:
 
 **Example 1: Animal**
 
-State:
- 
-- name
-- age 
-- phylum
+State: name, age, phylum
 
-Behavior
-- eat
-- sleep
+Behavior: eat, sleep
 
 **Example 2: Car**
 
-State: 
-- speed
-- velocity
-- left light(on/off)
-- right light(on/off)
+State: speed, velocity, left light(on/off), right light(on/off)
 
-Behavior:
-- turn left
-- turn right
-- change speed
-- change velocity
-- brake
+Behavior: turn left, turn right, change speed, change velocity, brake
 
 ### 2. Class
 
@@ -80,8 +65,8 @@ In the code above:
 - `new` is keyword for creating a new instance of object.
 - `Animal()` is the constructor method for creating an instance.
 
-[!NOTE]
-All function which is in java class is called "method". 
+> [!NOTE]
+> All function which is in java class is called "method". 
 
 
 **Constructor** is the method
