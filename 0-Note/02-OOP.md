@@ -1,10 +1,14 @@
 # Object-Oriented Programming
+There are 6 main concepts of object-oriented programming:
 
-## 6 Main Concepts
-There are 6 main concepts of object-oriented programming.
-(2 Definition, 4 Ideals)
+1. [Object](#1-object)
+2. [Class](#2-class)
+3. [Encapsulation](#3-encapsulation)
+4. [Inheritance](#4-inheritance)
+5. [Polymorphism](#5-polymorphism)
+6. [Abstraction](#6-abstraction)
 
-### 1. Object
+## 1. Object
 Object is a group of related state and behavior, explained by the concept of real-world objects, for example, animal, rock, pencil, bicycle, etc. 
 
 An object has two characteristic:
@@ -23,7 +27,7 @@ State: speed, velocity, left light(on/off), right light(on/off)
 
 Behavior: turn left, turn right, change speed, change velocity, brake
 
-### 2. Class
+## 2. Class
 
 Class is the blueprint or prototype for creating object, priscribing what object will have and can act after it is created. 
 
@@ -92,7 +96,7 @@ According to the constructor,
 
 - `0` is satisfying `velocity`.
 
-If we want to add multiple pattern of parameter,for example:
+If we want to add multiple pattern of parameter, for example:
 
 Car No.1 no need to put any parameter (auto set to 0).
 
@@ -136,6 +140,68 @@ public class Car {
 ```
 > [!WARNING]
 > If the two constructors have same number of parameter, parameter types must not be the same.
-> The program will be error as duplicating the method. 
+> The program will be error as duplicating the method following code below.
+> ```Java
+>   //Error case 
+>   public Car(float speed)
+>   {
+>       //Do smth
+>   }
+>   public Car(float acceleration)
+>   {
+>       //Do smth
+>   }
+> ``` 
+> If the data type of parameter is not the same, it still works!
+> ```Java
+>   //Good case 
+>   public Car(String name)
+>   {
+>       //Do smth
+>   }
+>   public Car(float acceleration)
+>   {
+>       //Do smth
+>   }
+>```
 
-Code: 00Car [here](./00Car/src/)
+Example Code: 00Car [here](./00Car/src/)
+
+## 3. Encapsulation
+Object always has sides which we cannot see, for example, ourselves have secrets or faces that we do not want others to see.
+
+This is the example for encapsulation.
+
+![Encapsulation Example](./assets/EncapsulationExample.png)
+
+Mostly, we use this concept to cover the secret like personal infomation.
+
+There are 3 modifiers that control the accessibily; `public`, `protected` and `private`, used with class, variable and method.
+
+### Access Levels
+|Modifier   |Class     |Package      |Subclass     |World        |
+|-----------|----------|-------------|-------------|-------------|
+|`public`   |Can Access|Can Access   |Can Access   |Can Access   |
+|`protected`|Can Access|Can Access   |Can Access   |Cannot Access|
+|no modifier|Can Access|Can Access   |Cannot Access|Cannot Access|
+|`private`  |Can Access|Cannot Access|Cannot Access|Cannot Access|
+
+`public`: everywhere, every person can access.
+
+`protected`: only inside the program, anyone outside the program cannot access.
+
+***no modifier*** e.g. `class App`: Only inside its package(folder). It is also called ***package private***. 
+
+`private`: only inside the class, other classes cannot access.
+
+Example Code Explanation: [02-ScopeEncapsulation](../02-ScopeEncapsulation/src)
+
+```bash
+    
+```
+
+## 4. Inheritance
+
+## 5. Polymorphism
+
+## 6. Abstraction
