@@ -1,7 +1,18 @@
+# From Writer
+
+
+# Content
+1. Basic Java [On-Going]
+2. Object-Oriented-Programming [On-Going]
+3. Data Structure & Algorithm [On-Going]
+4. JavaFX [On-Going]
+
+# Basic Java
+
 # Object-Oriented Programming
 Object
 
-## 6 Main Concept
+## 6 Main Concepts
 
 ### 1. Object
 
