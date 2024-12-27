@@ -188,7 +188,7 @@ There are 3 modifiers that control the accessibily; `public`, `protected` and `p
 
 `public`: everywhere, every person can access.
 
-`protected`: only inside the program, anyone outside the program cannot access.
+`protected`: can access in its class, package and subclass/[childclass](#4-inheritance) .
 
 ***no modifier*** e.g. `class App`: Only inside its package(folder). It is also called ***package private***. 
 
@@ -197,8 +197,52 @@ There are 3 modifiers that control the accessibily; `public`, `protected` and `p
 Example Code Explanation: [02-ScopeEncapsulation](../02-ScopeEncapsulation/src)
 
 ```bash
-    
+.
+├── App.class
+├── App.java
+└── data
+    ├── ManagePerson.java
+    ├── Person.java
+    └── Programmer.java
 ```
+
+For example, code in Person.java
+```Java
+//Tell that class in data directory.
+package data;
+
+public class Person {
+    
+    private String name;
+    private int age;
+
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    protected void setName(String name)
+    {
+        this.name =  name;
+    }
+
+    protected void setAge(int age)
+    {
+        this.age = age;
+    }
+
+    protected String getName()
+    {
+        return this.name;
+    }
+}
+```
+1. `name` and `age` are ***private***, so only its class's members (`Person`, `setName`, `setAge`, `getName`) can access. Other classes cannot access.
+2. `getName`, `setAge` and `setName` are ***protected***. If you use those method in `App` class, it will traffic an error. If you use in `ManagePerson`, it will work because it is in the same directory/folder(`data`).
+3. `Person` is ***public***, so it can work everywhere.
+
+For more example usage, please see in the code.
+
 
 ## 4. Inheritance
 
